@@ -604,3 +604,98 @@ button { font: inherit; }
     bottom: 16px;
   }
 }
+
+/* ========================================
+   Typography rhythm
+   허밍필라테스 전체 제목 행간 정리
+======================================== */
+
+/* 메인 섹션 대제목 */
+.hero h1,
+.intro h2,
+.program h2,
+.teachers-head h2,
+.studio h2,
+.process h2,
+.location-head h2,
+.contact h2 {
+  line-height: 1.14;
+  letter-spacing: -0.05em;
+}
+
+/* 히어로는 크기가 가장 크므로 살짝만 타이트하게 */
+.hero h1 {
+  line-height: 1.11;
+}
+
+/* 노란 브랜드 메시지 */
+.quote-inner p {
+  line-height: 1.22;
+  letter-spacing: -0.045em;
+}
+
+/* 세심하게 / 편안하게 / 꾸준하게 */
+.value-content h3 {
+  line-height: 1.16;
+}
+
+/* 프로그램 제목 */
+.program-row h3 {
+  line-height: 1.28;
+}
+
+/* 강사 이름 */
+.teacher-intro h3 {
+  line-height: 1.12;
+}
+
+/* 처음 방문 순서의 소제목 */
+.process-list strong {
+  line-height: 1.35;
+}
+
+/* 설명문 */
+.hero-description,
+.intro-grid p,
+.program-lead,
+.studio-head > p,
+.teachers-head > p,
+.teacher-lead,
+.process-list p,
+.location-row p {
+  line-height: 1.82;
+}
+
+@media (max-width: 768px) {
+  .hero h1,
+  .intro h2,
+  .program h2,
+  .teachers-head h2,
+  .studio h2,
+  .process h2,
+  .location-head h2,
+  .contact h2 {
+    line-height: 1.16;
+    letter-spacing: -0.045em;
+  }
+
+  .hero h1 {
+    line-height: 1.13;
+  }
+
+  .quote-inner p {
+    line-height: 1.24;
+  }
+
+  .value-content h3 {
+    line-height: 1.18;
+  }
+
+  .process-list strong {
+    line-height: 1.4;
+  }
+
+  .process-list p {
+    line-height: 1.78;
+  }
+}
