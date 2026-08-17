@@ -699,3 +699,77 @@ button { font: inherit; }
     line-height: 1.78;
   }
 }
+.address-wrap {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 20px;
+  width: 100%;
+}
+
+.copy-address {
+  margin-left: auto;
+  flex: 0 0 auto;
+  margin-right: 20px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: var(--black);
+
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+}
+.copy-address svg {
+  width: 16px;
+  height: 16px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.7;
+}
+
+.copy-toast {
+  position: fixed;
+  left: 50%;
+  bottom: 32px;
+  transform: translate(-50%, 12px);
+
+  padding: 12px 18px;
+
+  background: #11110f;
+  color: #f7f4eb;
+
+  font-size: 13px;
+  font-weight: 600;
+
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+
+  z-index: 9999;
+
+  transition:
+    opacity 0.25s ease,
+    transform 0.25s ease,
+    visibility 0.25s ease;
+}
+
+.copy-toast.show {
+  opacity: 1;
+  visibility: visible;
+  transform: translate(-50%, 0);
+}
+
+@media (max-width: 768px) {
+  .address-wrap {
+    align-items: flex-start;
+  }
+
+  .copy-address {
+    margin-top: 7px;
+  }
+}

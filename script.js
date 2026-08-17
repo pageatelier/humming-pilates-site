@@ -30,3 +30,25 @@ const observer = new IntersectionObserver((entries) => {
 }, { threshold: 0.12, rootMargin: '0px 0px -30px 0px' });
 
 document.querySelectorAll('.reveal').forEach((el) => observer.observe(el));
+
+
+const copyAddressButton = document.querySelector(".copy-address");
+const copyToast = document.getElementById("copyToast");
+
+if (copyAddressButton && copyToast) {
+  copyAddressButton.addEventListener("click", async () => {
+    const address = copyAddressButton.dataset.address;
+
+    try {
+      await navigator.clipboard.writeText(address);
+
+      copyToast.classList.add("show");
+
+      setTimeout(() => {
+        copyToast.classList.remove("show");
+      }, 1800);
+    } catch (error) {
+      console.error("주소 복사 실패:", error);
+    }
+  });
+}
